@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eed0ae;
+  }
+  
+  .container-one {
+    width: 40vw;
+  }
+  .container-two{
+    width: 40vw;
+  }
+  .container-three{
+    width: 65vw;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .BalanceContainer{
+    width: 70%;
+  }
+  
+  button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input, select {
+    width: 20vw;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  form button {
+    margin-right: 15px;
+    margin-top: 15px;   
+  }
+  form input{
+    width: 15vw;
+  }
+ 
+
+ 
+  
