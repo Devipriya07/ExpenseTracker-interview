@@ -10,14 +10,15 @@ export default function AddBalanceForm({balance,setBalance}){
         setIncome('');
     }
     return(
-        <div>
+        <div style={{height:'45vh'
+        }}>
             <div>
-                <h2>Balance: {balance}</h2>
+                <h2>Total Balance: {balance}</h2>
                 <h2>
                     Add balance
                 </h2>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{margin:'-15px'}}>
                 <div>
                     <input type="number" placeholder="Income Amount" required value={income} onChange={(e)=>setIncome(e.target.value)}></input>
                 </div>

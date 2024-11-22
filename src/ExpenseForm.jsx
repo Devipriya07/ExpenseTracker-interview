@@ -64,7 +64,7 @@ export default function ExpenseForm({ expenseList, setExpenseList, setBalance, b
 
     return (
 
-        <div style={{height:'45vh',
+        <div style={{height:'45vh'
         }}>
             <h2>{editId ? 'Edit Expense' : 'Add Expenses'}</h2>
             <form onSubmit={editId ? handleEdit : handleAdd}>

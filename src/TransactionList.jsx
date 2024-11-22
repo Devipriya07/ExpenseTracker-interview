@@ -5,7 +5,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { MdOutlineModeEdit } from "react-icons/md";
 
 export default function TransactionList({expenseList, setExpenseList}) {
-//   const [expenseList, setExpenseList] = useState([
+//   const [expenseList, setExpenseList] = useState([ 
 //     { id: 1, title: "Pizza", category: "Food", price: 20, date: "2024-11-20" },
 //     { id: 2, title: "Movie", category: "Entertainment", price: 15, date: "2024-11-19" },
 //     { id: 3, title: "Taxi", category: "Travel", price: 10, date: "2024-11-18" },
@@ -20,7 +20,7 @@ export default function TransactionList({expenseList, setExpenseList}) {
 
   const handleEditClick = (transaction) => {
     setIsEditing(true);
-    setEditFormData(transaction); // Populate the form with the item to edit
+    setEditFormData(transaction); // to Populate the form with the item to edit
   };
 
   const handleEditChange = (e) => {
@@ -30,11 +30,9 @@ export default function TransactionList({expenseList, setExpenseList}) {
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
-    setExpenseList((prev) =>
-      prev.map((item) =>
+    setExpenseList((prev) => prev.map((item) =>
         item.id === editFormData.id ? { ...editFormData } : item
-      )
-    );
+      ));
     setIsEditing(false);
     setEditFormData(null); // Clear the form after editing
   };
@@ -42,6 +40,12 @@ export default function TransactionList({expenseList, setExpenseList}) {
   return (
     <div>
       <h2>Transaction List</h2>
+
+        {/* Conditional rendering for no transactions */}
+        {expenseList.length === 0 ? (
+        <p>No transactions available.</p>
+        ) : (
+
       <ul>
         {expenseList.map((details) => (
           <li
@@ -65,6 +69,7 @@ export default function TransactionList({expenseList, setExpenseList}) {
           </li>
         ))}
       </ul>
+        )} 
 
       {/* Edit Form */}
       {isEditing && (
